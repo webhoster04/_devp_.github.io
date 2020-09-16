@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>devp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/ds-logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/ds-logo.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/ds-logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/ds-logo.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/ds-logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/ds-logo.png">
+<!-- favicons -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/custom-responsive-style.css">
+<script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/plugin-active.js"></script>
+</head>
+<style>
+
+$color1: #1F3944;
+
+* { 
+    margin:0; padding:0; 
+}
+body { 
+    background : $color1; 
+    font-size: 20px;
+    font-weight: 300;
+}
+
+canvas { 
+  position : absolute;
+  top      : 0;
+  right    : 0;
+  bottom   : 0;
+  left     : 0;
+  margin   : auto;
+}
+
+.glitch {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  width: 173px;
+  height: 55px;
+  font-family: 'Open Sans', sans-serif;
+  position : absolute;
+  top      : 0;
+  right    : 0;
+  bottom   : 0;
+  left     : 0;
+  margin   : auto;
+    transform: translateY(80px);
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(23px, 9999px, 17px, 0);
+  }
+  5% {
+    clip: rect(34px, 9999px, 24px, 0);
+  }
+  10% {
+    clip: rect(34px, 9999px, 9px, 0);
+  }
+  15.0% {
+    clip: rect(20px, 9999px, 22px, 0);
+  }
+  20% {
+    clip: rect(5px, 9999px, 18px, 0);
+  }
+  25% {
+    clip: rect(15px, 9999px, 35px, 0);
+  }
+  30.0% {
+    clip: rect(26px, 9999px, 36px, 0);
+  }
+  35% {
+    clip: rect(26px, 9999px, 33px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 5px, 0);
+  }
+  45% {
+    clip: rect(13px, 9999px, 28px, 0);
+  }
+  50% {
+    clip: rect(29px, 9999px, 38px, 0);
+  }
+  55.0% {
+    clip: rect(30px, 9999px, 13px, 0);
+  }
+  60.0% {
+    clip: rect(7px, 9999px, 36px, 0);
+  }
+  65% {
+    clip: rect(28px, 9999px, 14px, 0);
+  }
+  70% {
+    clip: rect(15px, 9999px, 16px, 0);
+  }
+  75% {
+    clip: rect(8px, 9999px, 8px, 0);
+  }
+  80% {
+    clip: rect(39px, 9999px, 2px, 0);
+  }
+  85.0% {
+    clip: rect(20px, 9999px, 18px, 0);
+  }
+  90% {
+    clip: rect(27px, 9999px, 8px, 0);
+  }
+  95% {
+    clip: rect(33px, 9999px, 14px, 0);
+  }
+  100% {
+    clip: rect(23px, 9999px, 25px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: $color1;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(5px, 9999px, 21px, 0);
+  }
+  5% {
+    clip: rect(38px, 9999px, 11px, 0);
+  }
+  10% {
+    clip: rect(37px, 9999px, 18px, 0);
+  }
+  15.0% {
+    clip: rect(11px, 9999px, 38px, 0);
+  }
+  20% {
+    clip: rect(24px, 9999px, 13px, 0);
+  }
+  25% {
+    clip: rect(37px, 9999px, 25px, 0);
+  }
+  30.0% {
+    clip: rect(28px, 9999px, 40px, 0);
+  }
+  35% {
+    clip: rect(14px, 9999px, 33px, 0);
+  }
+  40% {
+    clip: rect(35px, 9999px, 3px, 0);
+  }
+  45% {
+    clip: rect(23px, 9999px, 19px, 0);
+  }
+  50% {
+    clip: rect(7px, 9999px, 18px, 0);
+  }
+  55.0% {
+    clip: rect(18px, 9999px, 15px, 0);
+  }
+  60.0% {
+    clip: rect(14px, 9999px, 31px, 0);
+  }
+  65% {
+    clip: rect(29px, 9999px, 4px, 0);
+  }
+  70% {
+    clip: rect(12px, 9999px, 2px, 0);
+  }
+  75% {
+    clip: rect(3px, 9999px, 38px, 0);
+  }
+  80% {
+    clip: rect(24px, 9999px, 39px, 0);
+  }
+  85.0% {
+    clip: rect(34px, 9999px, 12px, 0);
+  }
+  90% {
+    clip: rect(15px, 9999px, 11px, 0);
+  }
+  95% {
+    clip: rect(10px, 9999px, 14px, 0);
+  }
+  100% {
+    clip: rect(38px, 9999px, 21px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: $color1;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+</style>
+ 
+
+<!-- Link to my website -->
+
+
+  <header>
+    <div class="mobile-logo">
+    <a href=""><img src="images/ds-logo.png"></a>
+  </div>
+  <a class="menu-toggle rounded" href="#">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="smooth-scroll" href="#Header"></a>
+      </li>
+     
+      <li class="sidebar-nav-item">
+        <a  href="contactus.html">contact us</a>
+      </li>
+     
+      <li class="sidebar-nav-item">
+        <a  href="about.html">About Us</a>
+      </li>
+	  
+	  <li class="sidebar-nav-item">
+        <a  href="https://forms.gle/T9stLfUDBs8qnkDm8">Feedback</a>
+      </li>
+      
+    </ul>
+  </nav>
+  </header>
+<section id="Banner">
+  <div class="logo">
+    <img src="images/ds-logo.png">
+  </div>
+  <div class="blacksection">
+    <h1>_devp_<br></h1>
+	
+  </div>
+</section>
+
+<section id="OurBlog"> 
+  <div class="container">
+    <h2>hire a web developer for your website</h2>
+    
+    <div class="blog-wrap">
+      <div class="each-block clearfix one"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>get your own static profile</h3>
+          <p>get started at very low prise!!</p>
+        </div>
+      </div>
+
+      <div class="each-block clearfix two"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>get your website now</h3>
+          <p>"at very low cost“</p>
+        </div>
+      </div>
+     
+</div>
+    <div class="container">
+    <h2>get done your school IT projects </h2>
+    
+    <div class="blog-wrap">
+      <div class="each-block clearfix one"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>our teem members will complete all your coading projects</h3>
+          <p>contact us for more</p>
+        </div>
+      </div>
+	  
+    </div>
+	
+	 <div class="container">
+    <h2>hire a security expert</h2>
+    
+    <div class="blog-wrap">
+      <div class="each-block clearfix one"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>facing any security and software issue with your pc</h3>
+          <p>hire a trusted security expert now!! </p>
+        </div>
+      </div>
+
+      <div class="each-block clearfix two"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>get a security check of your device and network</h3>
+          <p>"hire a trusted security expert now“</p>
+        </div>
+      </div>
+      <div class="each-block clearfix three"> 
+        <div class="icon">
+          <img src="images/blog-icon.png">
+        </div>
+        <div class="blog-intro"> 
+          <h3>someone is peeping your privacy</h3>
+          <p>“want to become more secure?” </p>
+        </div>
+      </div>
+	 </div>
+	 <div class="container">
+  <p>if you had any problem related with IT we will provide you best expert at very low cost</p>
+    
+  </div>
+  
+
+</section>
+
+<footer id="Contact">
+  <div class="container">
+  <p>if you want our services contact us</p>
+  
+   
+    <a href="https://forms.gle/pXxtXYYN2j3Dba2d8" class="email-btn"><span><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</span></a>
+    
+  </div>
+</footer>
+ <div class="copyright"><p>Copyrights</p>
+</div>
+</body>
+</html>
